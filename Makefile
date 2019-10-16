@@ -3,7 +3,6 @@
 CFLAGS += $(shell pkg-config --cflags hidapi-libusb)
 LIBDIR = /usr/lib/x86_64-linux-gnu/
 LDFLAGS += -L $(LIBDIR) -Wl,-rpath $(LIBDIR) $(shell pkg-config --libs hidapi-libusb)
-# LDFLAGS += $(shell pkg-config --libs hidapi-libusb) -L $(LIBDIR)
 
 all: relay-hid
 
